@@ -10,7 +10,7 @@ app.get("/", (req, res) => {
 
 app.get("/suma", (req, res) => {
     const {num1, num2} = req.query;
-    const sum = num1 + num2;
+    const sum = parseInt(num1) + parseInt(num2);
     res.status(200).send({msg: `El resultado de la suma es ${sum}.`})
 })
 
